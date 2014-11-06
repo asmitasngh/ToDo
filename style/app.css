@@ -1,0 +1,23 @@
+.todo{
+    display: block;
+    margin:0 auto;
+	margin-bottom: 20px;
+	padding:20px;
+	min-height: 20px;
+	//height:30px;
+	width:20%;
+	border: 1px solid grey;
+	border-radius: 4px;
+	background-color: cyan;
+}
+.done-true{
+	text-decoration: line-through;
+	color: grey;
+	}
+	ul
+{
+    list-style-type: none;
+}
+.formm{
+	display: inline-block;
+}

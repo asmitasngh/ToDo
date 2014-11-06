@@ -1,0 +1,30 @@
+<html>
+<head>
+	<script src="script/angular.min.js"></script>
+	<script src="script/app.js"></script>
+	<link href= "style/app.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div ng-app = "todo">
+		<div class="todo"><h1>What I have to do today!!</h1>
+			<div ng-controller= "toDo">
+				<form ng-submit="submit()">
+					<input type="text" ng-model="todo"  placeholder="I need to..">
+					<input type="submit" value="Add">
+				</form>
+				<ul ng-repeat="todo in todos" >
+      				<li ng-dblclick="editTodo(todo)">    
+						<input type="checkbox" ng-model="todo.done">
+          				<span  title="edit" ng-show="!todo.editing" class="done-{{todo.done}}">{{todo.text}}
+          				</span>
+           				<form ng-submit="doneEditing(todo)" ng-show="todo.editing" class="formm">
+              				<span><input ng-model="todo.text"></span>
+          				</form> 
+        			</li>
+    			</ul>
+	 			<button class="clear-btn" ng-click="clearCompleted()">Clear completed</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
